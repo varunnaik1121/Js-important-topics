@@ -4,7 +4,7 @@
 // //------forEach polyfill--------------
 // Array.prototype.polyforEach = function (callback) {
 //   for (let i = 0; i < this.length; i++) {
-//     arr[i] = callback(this[i], i, this);
+//     this[i] = callback(this[i], i, this);
 //   }
 // };
 // arr.polyforEach((item) => item * 2);
@@ -76,10 +76,4 @@
 // const isFound = arr.polyInludes(2, 5);
 // console.log(isFound);
 
-//polyfill for push in js
-const pushArr = [1, 2, 3, 4, 5];
-
-Array.prototype.myPush = function (...items) {
-    
-};
-
+//practice

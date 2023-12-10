@@ -19,9 +19,11 @@ const fetchAllPromises = (promises) => {
   const promiseArr = [];
   promises.forEach((promise) => {
     return new Promise((resolve, reject) => {
-      promiseArr.push(resolve(promise));
+      if (promise) {
+        promiseArr.push(resolve(promise));
+      } else {
+        promiseArr.push(reject(promise));
+      }
     });
   });
-  console.log(promiseArr);
 };
-fetchAllPromises([2, 'hello', 34]);
