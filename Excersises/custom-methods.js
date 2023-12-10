@@ -52,9 +52,9 @@ const reducedValue = reduceArr.reduce((acc, currValue) => {
 console.log(reducedValue); //prints 25
 
 Array.prototype.customReduce = function (callback, initialValue) {
-  let accumulator = initialValue || 0;
+  let accumulator = initialValue;
   for (let i = 0; i < this.length; i++) {
-    accumulator += callback(this[i], i, this);
+    accumulator=accumulator?callback(accumulator,this[i],i,this):this[i];
   }
   return accumulator;
 };
