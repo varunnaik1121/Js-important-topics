@@ -60,7 +60,7 @@ logUser(
   randomUser.login.bind(randomUser, false)
 );
 
-example for bind in js
+// example for bind in js
 
 let user3 = {
   name: 'chiranth',
